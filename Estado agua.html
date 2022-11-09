@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado agua</title>
+</head>
+<body>
+    <script>
+        function verEstado(){
+            var temperatura= document.getElementById("temperatura").value;
+            
+            var estado=document.getElementById("temperatura").value;
+            if (temperatura<0){
+            alert("hielo")
+         }else{
+            if(temperatura<100){
+            alert("líquido")
+            }else{
+                if(temperatura>100)
+            alert("vapor")
+        }
+        }
+        }
+           
+    </script>
+    Temperatura:<input type="text" id="temperatura"><br>
+    <input type="button" value="¿Que estado será?" onclick="verEstado()">
+    
+
+</body>
+</html>
