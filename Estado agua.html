@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado agua</title>
+</head>
+<body>
+    <style>
+
+body{
+    background-color:cyan;
+    color:red;
+    font-size:60px;
+     font-family:Arial, Helvetica, sans-serif;
+}
+input{
+    background-color:lightcoral;
+    color:red;
+    font-size:60px;
+     font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+.hie{
+    background-color:aqua;
+    color:azure;
+}
+.liq{
+    background-color:aqua;
+    color:azure;
+}
+.vap{
+    background-color:aqua;
+    color:azure;
+}
+
+
+    </style>
+    <script>
+        function verEstado(){
+            var temperatura= document.getElementById("temperatura").value;
+            
+            var estado=document.getElementById("temperatura").value;
+            if (temperatura<0){
+            //alert("hielo")
+            document.getElementById("mensaje").innerHTML = "<h1 class='hie'>Hielo</h1>";
+         }else{
+            if(temperatura<100){
+            //alert("líquido")
+            document.getElementById("mensaje").innerHTML = "<h1 class='liq'>Líquido</h1>";
+            }else{
+                if(temperatura>100)
+            //alert("vapor")
+            document.getElementById("mensaje").innerHTML = "<h1 class='vap'>Vapor</h1>";
+        }
+        }
+        }
+           
+    </script>
+    Temperatura:<input type="text" id="temperatura"><br><br>
+    <input type="button" value="¿Que estado será?" onclick="verEstado()">
+    <div id="mensaje"> </div>
+
+</body>
+</html>
