@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda de los alimentos</title>
+    <script>
+        let lista_ods = ["glucidos","lipidos","proteinas", "proteinas lacticas", "frutas", "verduras"];
+
+    </script>
+</head>
+<body>
+    <style>
+
+        body{
+            background-color:green;
+            color:orange;
+            font-size:30px;
+             font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        input{
+            background-color:lightcoral;
+            color:red;
+            font-size:30px;
+             font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        </style>
+
+    <div id="mensaje"></div>
+<img src="rueda de los alimentos.webp" alt="Objetivos de desarrollo sostenible" />
+    <script>
+        let nombre = "";
+        let ods = "";
+
+        nombre = prompt("¿Como te llamas?");
+        ods = prompt("Selecciona un grupo de la tablas. Elige entre 1 y 6:");
+     
+        let ods_select = parseInt(ods) - 1;
+
+        if(ods_select>=0 && ods_select<=16){
+              document.getElementById("mensaje").innerHTML += "<h1>Hola " + nombre + "</h1>";
+                document.getElementById("mensaje").innerHTML += "Has elegido el grupo <mark>" + lista_ods[ods_select] + "</mark>";
+        }else{
+            document.getElementById("mensaje").innerHTML += "<h1>Hola " + nombre + "</h1>";
+            document.getElementById("mensaje").innerHTML += "<p> No has elegido correctamente</p>";
+        }
+        
+
+
+    </script>
+
+</body>
+</html>
